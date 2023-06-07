@@ -1,4 +1,4 @@
-SELECT * FROM twitter
+SELECT * FROM twitter;
 
 -- Create new column for tweet_time as tweet_date (and put it next to tweet_time)
 
@@ -34,6 +34,7 @@ SET tweet_length_range =
 		WHEN tweet_length BETWEEN 0 AND 56 THEN '0 - 56'
         WHEN tweet_length BETWEEN 57 AND 112 THEN '57 - 112' 
         WHEN tweet_length BETWEEN 113 AND 168 THEN '113 - 168'
+        WHEN tweet_length BETWEEN 169 AND 224 THEN '169 - 224'
         WHEN tweet_length BETWEEN 169 AND 224 THEN '169 - 224'
         ELSE '225 - 280'
 	END;
