@@ -1,6 +1,3 @@
-SELECT count(*)
-FROM twitter;
-
 -- 1. Find the following averages per tweet: Impressions, replies, likes, profile clicks, engagement rate
 
 SELECT ROUND(AVG(impressions), 0) AS `Average Number of Impressions`,
@@ -50,7 +47,7 @@ SELECT *,
         WHEN Avg_For_Range < Overall_Average THEN 'Worse'
         ELSE NULL
 	END) AS Better_or_Worse_Than_Overall_Average
-FROM cte_1
+FROM cte_1;
     
 -- 5. Select all from top 5 tweets in each tweet length range and order by impressions desc
 
