@@ -20,7 +20,7 @@ CREATE TABLE twitter (
     replies INT,
     likes INT,
     profile_clicks INT,
-	url_clicks INT,
+    url_clicks INT,
     detail_expands INT,
     followers_gained INT,
     media_views INT,
