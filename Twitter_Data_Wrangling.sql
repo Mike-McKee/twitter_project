@@ -30,14 +30,14 @@ ADD COLUMN tweet_length_range VARCHAR(10) AFTER tweet_length;
 
 UPDATE twitter
 SET tweet_length_range = 
-	CASE
-		WHEN tweet_length BETWEEN 0 AND 56 THEN '0 - 56'
+    CASE
+        WHEN tweet_length BETWEEN 0 AND 56 THEN '0 - 56'
         WHEN tweet_length BETWEEN 57 AND 112 THEN '57 - 112' 
         WHEN tweet_length BETWEEN 113 AND 168 THEN '113 - 168'
         WHEN tweet_length BETWEEN 169 AND 224 THEN '169 - 224'
         WHEN tweet_length BETWEEN 169 AND 224 THEN '169 - 224'
         ELSE '225 - 280'
-	END;
+    END;
     
 -- Remove columns we don't need
 
@@ -71,4 +71,3 @@ RENAME COLUMN engagement_rate_update TO engagement_rate;
 
 DELETE FROM twitter
 WHERE tweet_type = 'Comment';
-

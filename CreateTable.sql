@@ -8,7 +8,7 @@ USE Twitter;
 -- Making the table that will store the data I import
 
 CREATE TABLE twitter (
-	tweet_num INT,
+    tweet_num INT,
     tweet_id BIGINT,
     tweet_text TEXT,
     tweet_type TEXT,
@@ -25,7 +25,7 @@ CREATE TABLE twitter (
     followers_gained INT,
     media_views INT,
     media_engagements INT
-    );
+);
 
 -- Changing the data type for engagement_rate column
 
